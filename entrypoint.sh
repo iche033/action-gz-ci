@@ -138,6 +138,8 @@ if [ -f "$SCRIPT_BEFORE_CMAKE" ] || [ -f "$SCRIPT_BEFORE_CMAKE_VERSIONED" ] ; th
   echo ::endgroup::
 fi
 
+. /opt/ros/jazzy/setup.sh
+
 echo ::group::cmake
 if [ -n "$CODECOV_ENABLED" ] && ${CODECOV_ENABLED} ; then
   cmake .. $CMAKE_ARGS -DCMAKE_BUILD_TYPE=coverage
